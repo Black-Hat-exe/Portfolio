@@ -38,7 +38,7 @@ The site is split into a clean, 4-page modular structure:
 
 ## 🚀 Local Setup
 If you want to run this locally:
-1. Clone the repository: `git clone https://github.com/black-hat-exe/https://black-hat-exe.github.io/Portfolio/.git`
+1. Clone the repository: `git clone https://black-hat-exe.github.io/Portfolio/.git`
 2. Open the folder in VS Code.
 3. Launch `index.html` using the Live Server extension.
 

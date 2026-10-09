@@ -76,7 +76,10 @@ p { color: var(--text-secondary); font-size: 1.15rem; margin-bottom: 1.5rem; fon
 .card-img-wrapper { width: 100%; height: 220px; border-bottom: 1px solid rgba(255,255,255,0.05); overflow: hidden; }
 .project-img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.6s ease; }
 .portfolio-card:hover .project-img { transform: scale(1.05); }
-.card-content { padding: 2rem; display: flex; flex-direction: column; flex: 1; }
+.card-content { padding: 2rem; display: flex; flex-direction: column; flex: 1;display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limits the text to exactly 3 lines */
+  -webkit-box-orient: vertical;  
+  overflow: hidden; }
 .card-link { margin-top: auto; display: inline-block; padding-top: 1.5rem; font-weight: 600; color: #a5b4fc; text-decoration: none; transition: 0.3s; }
 .card-link:hover { color: #ffffff; text-shadow: 0 0 10px rgba(165, 180, 252, 0.6); }
 

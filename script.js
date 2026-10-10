@@ -1,103 +1,56 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Highlight Active Nav Link
-    const currentPage = window.location.pathname.split("/").pop();
-    const navLinks = document.querySelectorAll(".nav-links a");
-    
-    navLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPage || (currentPage === "" && link.getAttribute("href") === "index.html")) {
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+        const href = link.getAttribute("href");
+        if (href && href.split("#")[0] === currentPage) {
             link.classList.add("active");
+            link.setAttribute("aria-current", "page");
         }
     });
 
-    // 2. Scroll Reveal Animations
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+    const revealElements = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries, instance) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    instance.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+        revealElements.forEach((element) => observer.observe(element));
+    } else {
+        revealElements.forEach((element) => element.classList.add("active"));
+    }
 
-    const revealOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
+    document.querySelectorAll("nav").forEach((header) => {
+        const button = header.querySelector(".menu-toggle");
+        const navigation = header.querySelector(".nav-links");
+        if (!button || !navigation) return;
+
+        const mobileQuery = window.matchMedia("(max-width: 767px)");
+        const setOpen = (open) => {
+            navigation.classList.toggle("is-open", open);
+            button.setAttribute("aria-expanded", String(open));
+            button.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+        };
+
+        button.addEventListener("click", () => {
+            setOpen(button.getAttribute("aria-expanded") !== "true");
+        });
+        navigation.addEventListener("click", (event) => {
+            if (event.target.closest("a")) setOpen(false);
+        });
+        header.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && button.getAttribute("aria-expanded") === "true") {
+                setOpen(false);
+                button.focus();
             }
         });
-    }, revealOptions);
 
-    revealElements.forEach(el => revealOnScroll.observe(el));
+        const resetOnDesktop = (event) => { if (!event.matches) setOpen(false); };
+        if (mobileQuery.addEventListener) mobileQuery.addEventListener("change", resetOnDesktop);
+        else mobileQuery.addListener(resetOnDesktop);
+        setOpen(false);
+    });
 });
-
-
-
-
-
-/* ===== MOBILE NAVIGATION ===== */
-(function () {
-  function initMobileNavigation() {
-    const menuButton = document.querySelector(".menu-toggle");
-    const navigation = document.querySelector(".nav-links");
-
-    // Exit safely if this page doesn't contain the mobile menu.
-    if (!menuButton || !navigation) return;
-
-    const mobileQuery = window.matchMedia("(max-width: 767px)");
-
-    function setMenuOpen(open) {
-      navigation.classList.toggle("is-open", open);
-      menuButton.setAttribute("aria-expanded", String(open));
-      menuButton.setAttribute(
-        "aria-label",
-        open ? "Close navigation menu" : "Open navigation menu"
-      );
-    }
-
-    menuButton.addEventListener("click", function () {
-      const isOpen =
-        menuButton.getAttribute("aria-expanded") === "true";
-
-      setMenuOpen(!isOpen);
-    });
-
-    // Close the menu after selecting a navigation link.
-    navigation.addEventListener("click", function (event) {
-      if (event.target.closest("a")) {
-        setMenuOpen(false);
-      }
-    });
-
-    // Allow keyboard users to close the menu with Escape.
-    document.addEventListener("keydown", function (event) {
-      if (
-        event.key === "Escape" &&
-        menuButton.getAttribute("aria-expanded") === "true"
-      ) {
-        setMenuOpen(false);
-        menuButton.focus();
-      }
-    });
-
-    // Reset menu state when returning to the desktop layout.
-    function handleBreakpointChange(event) {
-      if (!event.matches) {
-        setMenuOpen(false);
-      }
-    }
-
-    if (mobileQuery.addEventListener) {
-      mobileQuery.addEventListener("change", handleBreakpointChange);
-    } else {
-      // Compatibility with older browsers.
-      mobileQuery.addListener(handleBreakpointChange);
-    }
-
-    setMenuOpen(false);
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener(
-      "DOMContentLoaded",
-      initMobileNavigation,
-      { once: true }
-    );
-  } else {
-    initMobileNavigation();
-  }
-})();

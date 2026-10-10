@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- 1. Primary SEO Meta Tags -->
-    <title>Syed Muhammad Ertaza | Front-End Web Developer & UI Architect</title>
-    <meta name="description" content="Portfolio of Syed Muhammad Ertaza, a Front-End Web Developer based in Sheikhupura, Pakistan. Specializing in HTML, CSS, JavaScript, and custom Figma-to-code architecture.">
+    <title>Syed Muhammad Ertaza | Front-End Developer</title>
+    <meta name="description" content="Explore the portfolio of Syed Muhammad Ertaza, a front-end developer and BS IT student building responsive web interfaces with HTML, CSS, and JavaScript.">
     <meta name="keywords" content="Syed Muhammad Ertaza, Ertaza, Front-End Web Developer, Web Developer, Portfolio, UI Architect, Sheikhupura, Pakistan, Glassmorphism, BS IT">
     <meta name="author" content="Syed Muhammad Ertaza">
     <meta name="robots" content="index, follow">
@@ -60,17 +60,18 @@
     </script>
 
     <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#030712">
 </head>
 <body>
 
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">Syed Muhammad <span>Ertaza</span></a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="portfolio.html">Work</a>
-                <a href="credentials.html">Credentials</a>
-                <a href="contact.html">Contact</a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="primary-navigation" aria-label="Primary navigation">
+                <a href="index.html" aria-current="page" class="active">Home</a> <a href="portfolio.html">Work</a> <a href="credentials.html">Credentials</a> <a href="contact.html">Contact</a>
             </div>
         </div>
     </nav>
@@ -120,8 +121,8 @@
                 <a href="contact.html">Contact</a>
             </div>
             <div class="social-links">
-                <a href="https://github.com/black-hat-exe" target="_blank">GitHub Profile</a>
-                <a href="https://www.credly.com/users/syed-muhammad-ertaza" target="_blank">Credly Verification</a>
+                <a href="https://github.com/black-hat-exe" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                <a href="https://www.credly.com/users/syed-muhammad-ertaza" target="_blank" rel="noopener noreferrer">Credly Verification</a>
             </div>
             <p style="font-size: 0.9rem; color: #64748b; margin: 0;">© 2026 Syed Muhammad Ertaza. Hand-coded from scratch.</p>
         </div>

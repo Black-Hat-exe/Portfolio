@@ -3,58 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 1. Primary SEO Meta Tags -->
-    <title>Portfolio | Syed Muhammad Ertaza - Web Developer</title>
-    <meta name="description" content="Portfolio of Syed Muhammad Ertaza, a Front-End Web Developer based in Sheikhupura, Pakistan. Specializing in HTML, CSS, JavaScript, and custom Figma-to-code architecture.">
-    <meta name="keywords" content="Syed Muhammad Ertaza, Ertaza, Front-End Web Developer, Web Developer, Portfolio, UI Architect, Sheikhupura, Pakistan, Glassmorphism, BS IT">
+
+    <title>Front-End Projects | Syed Muhammad Ertaza</title>
+    <meta name="description" content="Explore the front-end development projects of Syed Muhammad Ertaza, including responsive web interfaces, a JavaScript calculator, and a cloud infrastructure dashboard.">
+    <meta name="keywords" content="Syed Muhammad Ertaza, Front-End Developer, Web Development Portfolio, HTML, CSS, JavaScript, UI Design, Pakistan">
     <meta name="author" content="Syed Muhammad Ertaza">
     <meta name="robots" content="index, follow">
-    
-    <!-- 2. Canonical Tag (Prevents duplicate content penalties) -->
+
     <link rel="canonical" href="https://black-hat-exe.github.io/Portfolio/portfolio.html">
-    <!-- 3. Open Graph / Social Media Tags -->
-    <meta property="og:title" content="Syed Muhammad Ertaza | Front-End Web Developer">
-    <meta property="og:description" content="View the custom-coded web architecture, front-end projects, and verified credentials of S.M. Ertaza.">
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://black-hat-exe.github.io/Portfolio/">
-    
-    <!-- 4. JSON-LD Schema Markup -->
+
+    <meta property="og:title" content="Front-End Projects | Syed Muhammad Ertaza">
+    <meta property="og:description" content="Explore custom-coded front-end projects, responsive interfaces, and interactive web applications by S.M. Ertaza.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://black-hat-exe.github.io/Portfolio/portfolio.html">
+
+    <meta name="theme-color" content="#030712">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Syed Muhammad Ertaza",
-      "alternateName": "Ertaza",
-      "jobTitle": "Front-End Web Developer",
-      "url": "https://black-hat-exe.github.io/Portfolio/",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Sheikhupura",
-        "addressRegion": "Punjab",
-        "postalCode": "39350",
-        "addressCountry": "PK"
-      },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Virtual University of Pakistan"
-      },
-      "knowsAbout": [
-        "Front-End Development", 
-        "HTML5", 
-        "CSS3", 
-        "JavaScript", 
-        "UI Architecture", 
-        "Figma to Code",
-        "Glassmorphism",
-        "Neumorphism"
-      ],
-      "sameAs": [
-        "https://github.com/black-hat-exe",
-        "https://www.upwork.com/freelancers/~01eef1f01ace77c496?mp_source=share",
-        "https://hubstafftalent.net/profiles/syed-muhammad-ertaza",
-        "https://www.credly.com/users/syed-muhammad-ertaza"
-      ]
+      "@type": "CollectionPage",
+      "name": "Front-End Development Portfolio",
+      "description": "Selected front-end development projects by Syed Muhammad Ertaza.",
+      "url": "https://black-hat-exe.github.io/Portfolio/portfolio.html",
+      "author": {
+        "@type": "Person",
+        "name": "Syed Muhammad Ertaza",
+        "url": "https://black-hat-exe.github.io/Portfolio/"
+      }
     }
     </script>
 
@@ -67,7 +43,7 @@
             <a href="index.html" class="logo">Syed Muhammad <span>Ertaza</span></a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="portfolio.html">Work</a>
+                <a href="portfolio.html" aria-current="page">Work</a>
                 <a href="credentials.html">Credentials</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -75,88 +51,197 @@
     </nav>
 
     <main class="container reveal">
-        <h2>Selected Works</h2>
-        <p>A collection of custom responsive layouts, UI translations, and front-end architecture.</p>
 
- <div class="portfolio-grid">
-            
-    <!-- Project 1: Cafe UI -->
-    <div class="portfolio-card reveal">
-        <div class="card-img-wrapper">
-            <img src="cafe-screenshot.png" alt="Syed Muhammad Ertaza - Front-End Web Developer Portfolio - Glassmorphism Cafe UI" class="project-img" onerror="this.style.display='none'">
-        </div>
-        <div class="card-content">
-            <div class="tech-stack">
-                <span class="tech-pill">HTML5</span>
-                <span class="tech-pill">CSS3</span>
-                <span class="tech-pill">Glassmorphism</span>
-            </div>
-            <h3 style="margin-bottom: 1rem;">Glassmorphism Cafe UI</h3>
-            <p>A fully responsive interface engineered for a conceptual cafe, bypassing generic templates entirely to build a custom frosted-glass architecture.</p>
-            <a href="https://black-hat-exe.github.io/cafe-project-I/" target="_blank" class="card-link">Live Deployment &rarr;</a>
-        </div>
-    </div>
+        <header class="portfolio-intro">
+            <span class="tech-pill">SELECTED PROJECTS</span>
+            <h2>Selected Works</h2>
+            <p>
+                A collection of front-end projects exploring responsive layouts,
+                interactive interfaces, and thoughtful web design.
+            </p>
+        </header>
 
-    <!-- Project 2: Calculator -->
-    <div class="portfolio-card reveal">
-        <div class="card-img-wrapper">
-            <img src="calc-screenshot.png" alt="Syed Muhammad Ertaza - Front-End Web Developer Portfolio - Neumorphic Calculator" class="project-img" onerror="this.style.display='none'">
-        </div>
-        <div class="card-content">
-            <div class="tech-stack">
-                <span class="tech-pill">JS</span>
-                <span class="tech-pill">CSS3</span>
-                <span class="tech-pill">Neumorphism</span>
-            </div>
-            <h3 style="margin-bottom: 1rem;">Neumorphic Calculator</h3>
-            <p>An interactive, soft-shadow utility interface focusing on clean state transitions and pure JavaScript mathematical logic.</p>
-            <a href="#" class="card-link">Repository &rarr;</a>
-        </div>
-    </div>
+        <div class="portfolio-grid">
 
-    <!-- Project 3: Cloud Infrastructure Dashboard -->
-    <div class="portfolio-card reveal">
-        <div class="card-img-wrapper">
-            <img src="cloud-screenshot.png" alt="Syed Muhammad Ertaza - Front-End Web Developer Portfolio - Cloud Infrastructure Dashboard" class="project-img" onerror="this.style.display='none'">
-        </div>
-        <div class="card-content">
-            <div class="tech-stack">
-                <span class="tech-pill">HTML5</span>
-                <span class="tech-pill">CSS3</span>
-                <span class="tech-pill">Glassmorphism</span>
-                <span class="tech-pill">Javascript</span>
-            </div>
-            <h3 style="margin-bottom: 1rem;">Cloud Infrastructure Dashboard</h3>
-            <p>A sleek, data-driven dashboard built to visualize server performance, network security, and real-time uptime metrics.</p>
-            <a href="https://black-hat-exe.github.io/Cloud-Infrastructure-Dashboard/" target="_blank" class="card-link">Live Deployment &rarr;</a>
-        </div>
-    </div> 
+            <!-- Project 1: Cafe UI -->
+            <article class="portfolio-card reveal">
+                <div class="card-img-wrapper">
+                    <img
+                        src="cafe-screenshot.png"
+                        alt="Preview of the Glassmorphism Cafe website interface"
+                        class="project-img"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
 
-    <!-- Project 4: Animated Coming Soon -->
-    <div class="portfolio-card coming-soon-card reveal">
-        <div class="coming-soon-content">
-            <h3 style="margin-bottom: 1rem;">Future Project</h3>
-            <p>Something awesome is currently brewing in the development pipeline...</p>
+                <div class="card-content">
+                    <div class="project-label">WEB DESIGN</div>
+
+                    <div class="tech-stack">
+                        <span class="tech-pill">HTML5</span>
+                        <span class="tech-pill">CSS3</span>
+                        <span class="tech-pill">Glassmorphism</span>
+                    </div>
+
+                    <h3>Glassmorphism Cafe UI</h3>
+
+                    <p>
+                        A custom cafe website concept featuring a frosted-glass
+                        visual style, carefully arranged content, and a responsive
+                        interface built with HTML and CSS.
+                    </p>
+
+                    <div class="project-links">
+                        <a
+                            href="https://black-hat-exe.github.io/cafe-project-I/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="card-link"
+                        >Live Demo <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2: Calculator -->
+            <article class="portfolio-card reveal">
+                <div class="card-img-wrapper">
+                    <img
+                        src="calc-screenshot.png"
+                        alt="Preview of the Neumorphic Calculator interface"
+                        class="project-img"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+
+                <div class="card-content">
+                    <div class="project-label">JAVASCRIPT</div>
+
+                    <div class="tech-stack">
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">CSS3</span>
+                        <span class="tech-pill">Neumorphism</span>
+                    </div>
+
+                    <h3>Neumorphic Calculator</h3>
+
+                    <p>
+                        An interactive calculator concept combining soft-shadow
+                        styling with JavaScript-based mathematical operations
+                        and interface interactions.
+                    </p>
+
+                    <div class="project-links">
+                        <a
+                            href="https://github.com/black-hat-exe"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="card-link"
+                        >Explore GitHub <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3: Cloud Infrastructure Dashboard -->
+            <article class="portfolio-card reveal">
+                <div class="card-img-wrapper">
+                    <img
+                        src="cloud-screenshot.png"
+                        alt="Preview of the Cloud Infrastructure Dashboard"
+                        class="project-img"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+
+                <div class="card-content">
+                    <div class="project-label">DASHBOARD UI</div>
+
+                    <div class="tech-stack">
+                        <span class="tech-pill">HTML5</span>
+                        <span class="tech-pill">CSS3</span>
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">Glassmorphism</span>
+                    </div>
+
+                    <h3>Cloud Infrastructure Dashboard</h3>
+
+                    <p>
+                        A cloud infrastructure dashboard interface designed to
+                        present server-performance indicators and network-security
+                        information through a structured, data-focused layout.
+                    </p>
+
+                    <div class="project-links">
+                        <a
+                            href="https://black-hat-exe.github.io/Cloud-Infrastructure-Dashboard/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="card-link"
+                        >Live Demo <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 4: Future Project -->
+            <article class="portfolio-card coming-soon-card reveal">
+                <div class="coming-soon-content">
+                    <span class="future-icon" aria-hidden="true">&lt;/&gt;</span>
+
+                    <div class="project-label">IN THE PIPELINE</div>
+
+                    <h3>Future Project</h3>
+
+                    <p>
+                        My next front-end experiment is taking shape.
+                        The goal: combine responsive architecture,
+                        meaningful interactions, and a polished user experience.
+                    </p>
+
+                    <div class="tech-stack future-tech-stack">
+                        <span class="tech-pill">UI / UX</span>
+                        <span class="tech-pill">Responsive Design</span>
+                        <span class="tech-pill">JavaScript</span>
+                    </div>
+
+                    <span class="future-note">Next chapter in progress</span>
+                </div>
+            </article>
+
         </div>
-    </div>
-</div>
-                
     </main>
 
     <footer>
         <div class="footer-content">
-            <h2 style="font-size: 2rem; margin: 0;">Syed Muhammad <span>Ertaza</span></h2>
+            <h2 style="font-size: 2rem; margin: 0;">
+                Syed Muhammad <span>Ertaza</span>
+            </h2>
+
             <div class="footer-nav">
                 <a href="index.html">Home</a>
                 <a href="portfolio.html">Work</a>
                 <a href="credentials.html">Credentials</a>
                 <a href="contact.html">Contact</a>
             </div>
+
             <div class="social-links">
-                <a href="https://github.com/black-hat-exe" target="_blank">GitHub Profile</a>
-                <a href="https://www.credly.com/users/syed-muhammad-ertaza" target="_blank">Credly Verification</a>
+                <a
+                    href="https://github.com/black-hat-exe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >GitHub Profile</a>
+
+                <a
+                    href="https://www.credly.com/users/syed-muhammad-ertaza"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Credly Verification</a>
             </div>
-            <p style="font-size: 0.9rem; color: #64748b; margin: 0;">© 2026 Syed Muhammad Ertaza. Hand-coded from scratch.</p>
+
+            <p style="font-size: 0.9rem; color: #64748b; margin: 0;">
+                © 2026 Syed Muhammad Ertaza. Hand-coded from scratch.
+            </p>
         </div>
     </footer>
 
